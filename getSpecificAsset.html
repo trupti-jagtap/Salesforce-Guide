@@ -1,0 +1,27 @@
+<!-- sldsValidatorIgnore -->
+<template>
+
+    <lightning-card title="Assets"  variant="Narrow" icon-name="standard:account">
+          <div class="slds-p-around_medium lgc-bg-inverse">
+        <p>Do you want download data as a CSV format, Click Here &nbsp;
+            <lightning-button icon-name="utility:download" 
+                              label="Download as CSV" 
+                              title="Download CSV File"
+                              onclick={downloadCSVFile} variant="brand"></lightning-button>
+        </p>
+    </div>
+
+    <template if:true={assets}>
+    <lightning-datatable data={assets} columns={columns} key-field="id" hide-checkbox-column show-row-number-column row-number-offset={rowOffset}></lightning-datatable>
+    </template>
+    </lightning-card>
+   
+  
+    <!-- <div class="slds-box slds-theme--default" >
+        Click on the link Below to Export data as excel file.
+        <p class="slds-m-top--large"> -->
+            <!-- <a onclick={exportContactData}>Export Contact Data</a> -->
+            <!-- <lightning-button variant="brand" label="Export Asset Data data" title="Export Asset Data" onclick={exportfilteredAssetData}></lightning-button>
+        </p>
+    </div> -->
+</template>
